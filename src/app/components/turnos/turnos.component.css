@@ -1,0 +1,34 @@
+:host {
+    display: block;
+    height: 100%;
+    /* O cualquier tamaño que necesites */
+}
+
+#calendar {
+    width: 100hh;
+    height: 100vh;
+    /* Esto hace que el calendario ocupe el 100% de la altura de la ventana */
+}
+
+.turno-form {
+    display: inline-flex;
+    float: left;
+    flex-direction: column;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 5%;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: row;
+    flex: 1
+}

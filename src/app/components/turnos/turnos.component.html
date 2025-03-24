@@ -1,1 +1,15 @@
-<p>turnos works!</p>
+<div *ngIf="showTurnoForm" class="turno-form">
+    <h2>Selecciona la hora para el turno</h2>
+    <div class="form-inputs">
+        <span style="text-align: center; font-size: larger; padding: 2%;">{{selectedDate}}</span>
+        <input type="text" placeholder="Tu nombre" [(ngModel)]="name" />
+        <input type="time" [(ngModel)]="selectedTime" />
+        <div class="form-buttons">
+            <button (click)="saveTurno()">Guardar Turno</button>
+            <button (click)="cancelTurno()">Cancelar</button>
+        </div>
+    </div>
+</div>
+<full-calendar #calendar [options]="calendarOptions" id="calendar" (dateClick)="handleDateClick($event)"></full-calendar>
+
+<!-- Formulario para agregar turno -->

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatCardModule } from '@angular/material/card';
+import { FullCalendarModule } from '@fullcalendar/angular';
+
 
 
 import { MatCommonModule } from '@angular/material/core';
@@ -37,8 +39,10 @@ import { PerfilComponent } from './perfil/perfil.component';
     MatCardModule, 
     MatIconModule,
     FormsModule,
-    HttpClientModule 
+    HttpClientModule,
+    FullCalendarModule 
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
