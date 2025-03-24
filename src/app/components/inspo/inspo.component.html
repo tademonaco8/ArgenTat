@@ -1,0 +1,8 @@
+<div class="galeria">
+    <mat-card class="imagen" *ngFor="let imagen of imagenes; let i = index">
+        <mat-card-header>
+            <mat-card-title class="tituloImagen">Diseño {{i + 1}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="imagen" alt="Imagen de galería">
+    </mat-card>
+</div>

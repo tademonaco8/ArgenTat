@@ -3,16 +3,43 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatCardModule } from '@angular/material/card';
+
+
+import { MatCommonModule } from '@angular/material/core';
+import { PpalComponent } from './components/ppal/ppal.component';
+import { LoginComponent } from './components/login/login.component';
+import { InspiracionComponent } from './components/inspo/inspo.component';
+import { FormsModule } from '@angular/forms';
+import { TurnosComponent } from './components/turnos/turnos.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './http-interceptor';
+import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PpalComponent, 
+    LoginComponent,
+    InspiracionComponent,
+    TurnosComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule, 
+    MatCommonModule,
+    MatTooltipModule,
+    MatCardModule, 
+    MatIconModule,
+    FormsModule,
+    HttpClientModule 
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

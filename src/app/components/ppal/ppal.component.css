@@ -1,0 +1,38 @@
+.leftPicContainer {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top: 75px;
+}
+
+.rightPicContainer {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top: 75px;
+    transform: scaleX(-1);
+}
+
+h1 {
+    font-size: 72px;
+    margin-top: 20px;
+    font-family: 'Sacramento', cursive;
+}
+
+.instagramLogoContainer {
+    display: flex;
+    z-index: 1;
+    position: relative;
+    top: 260px;
+    left: 210px;
+    background-color: #d1d1d1;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 40px;
+    border: 10px solid transparent;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) inset;
+}
+
+.instagramLogoContainer img {
+    height: 100px;
+}

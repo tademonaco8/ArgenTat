@@ -1,0 +1,25 @@
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
+    width: 1488px;
+}
+
+.imagen {
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+.imagen img {
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tituloImagen {
+    font-size: 36px;
+    font-family: 'Sacramento', cursive;
+}
